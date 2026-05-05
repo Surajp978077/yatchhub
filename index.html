@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AQUAVISTA offers the world's most luxurious yacht charters. Experience unmatched elegance and breathtaking destinations with our exclusive superyacht fleet.">
+    <meta name="keywords" content="luxury yacht, yacht charter, superyacht, luxury travel, Mediterranean cruise, Caribbean yacht">
+    <title>AQUAVISTA | Luxury Yacht Charters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="brand">AQUAVISTA</a>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#products">Fleet</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="https://wa.me/1234567890" class="btn-primary" target="_blank">Book Now</a>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <section class="hero" id="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="assets/hero.png" alt="Luxury Yacht Sunset">
+                <div class="hero-content">
+                    <h1>Sail Into Luxury</h1>
+                    <p>Experience the world's most breathtaking destinations on our exclusive superyachts.</p>
+                    <a href="#products" class="btn-primary">Explore Fleet</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/yacht1.png" alt="Yacht Monaco">
+                <div class="hero-content">
+                    <h1>Unmatched Elegance</h1>
+                    <p>Discover the finest maritime engineering combined with ultra-premium hospitality.</p>
+                    <a href="#products" class="btn-primary">View Designs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats reveal">
+        <div class="stat-item">
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Annual Bookings</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="45">0</h3>
+            <p>Elite Yachts</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="85">0</h3>
+            <p>% Recurring Clients</p>
+        </div>
+        <div class="stat-item">
+            <h3 class="counter" data-target="12">0</h3>
+            <p>Global Awards</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products reveal" id="products">
+        <div class="section-header">
+            <h2>Our Signature Fleet</h2>
+            <p>Hand-selected superyachts for the ultimate luxury travel experience.</p>
+        </div>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
+            <div class="product-card" onclick="openModal('solstice')">
+                <div class="product-img">
+                    <img src="assets/yacht1.png" alt="The Solstice">
+                </div>
+                <div class="product-info">
+                    <h3>The Solstice</h3>
+                    <div class="product-meta">
+                        <span>72m Length</span>
+                        <span>12 Guests</span>
+                    </div>
+                    <p>A masterpiece of modern design featuring a private beach club and infinity pool.</p>
+                    <button class="btn-primary">View Details</button>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card" onclick="openModal('ocean-princess')">
+                <div class="product-img">
+                    <img src="assets/activities.png" alt="Ocean Princess">
+                </div>
+                <div class="product-info">
+                    <h3>Ocean Princess</h3>
+                    <div class="product-meta">
+                        <span>65m Length</span>
+                        <span>10 Guests</span>
+                    </div>
+                    <p>Perfect for families with a massive selection of water sports and entertainment.</p>
+                    <button class="btn-primary">View Details</button>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="product-card" onclick="openModal('azure-dream')">
+                <div class="product-img">
+                    <img src="assets/interior.png" alt="Azure Dream">
+                </div>
+                <div class="product-info">
+                    <h3>Azure Dream</h3>
+                    <div class="product-meta">
+                        <span>80m Length</span>
+                        <span>16 Guests</span>
+                    </div>
+                    <p>Ultimate privacy and sophisticated interiors for high-profile gatherings.</p>
+                    <button class="btn-primary">View Details</button>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="product-card" onclick="openModal('midnight-star')">
+                <div class="product-img">
+                    <img src="assets/hero.png" alt="Midnight Star">
+                </div>
+                <div class="product-info">
+                    <h3>Midnight Star</h3>
+                    <div class="product-meta">
+                        <span>55m Length</span>
+                        <span>8 Guests</span>
+                    </div>
+                    <p>A sleek, high-speed vessel designed for quick island hopping in style.</p>
+                    <button class="btn-primary">View Details</button>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="product-card" onclick="openModal('emerald-sea')">
+                <div class="product-img">
+                    <img src="assets/yacht1.png" alt="Emerald Sea">
+                </div>
+                <div class="product-info">
+                    <h3>Emerald Sea</h3>
+                    <div class="product-meta">
+                        <span>90m Length</span>
+                        <span>20 Guests</span>
+                    </div>
+                    <p>One of the largest charter yachts in the world, featuring a private deck and cinema.</p>
+                    <button class="btn-primary">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews reveal" id="reviews">
+        <div class="section-header">
+            <h2>Guest Experiences</h2>
+        </div>
+        <div class="review-slider">
+            <div class="review-item">
+                <p>"The most seamless and luxurious vacation we've ever had. The crew's attention to detail was beyond anything we expected. Truly a five-star experience at sea."</p>
+                <div class="reviewer-info">
+                    <span class="reviewer-name">James Henderson</span>
+                    <span class="text-muted">| CEO, Global Tech</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="#" class="brand">AQUAVISTA</a>
+                <p>Redefining luxury travel since 2010. Experience the ocean like never before.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+1234567890"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Fleet</h4>
+                <a href="#">Superyachts</a>
+                <a href="#">Sailing Yachts</a>
+                <a href="#">Expedition Yachts</a>
+            </div>
+            <div class="footer-section">
+                <h4>Destinations</h4>
+                <a href="#">Mediterranean</a>
+                <a href="#">Caribbean</a>
+                <a href="#">South Pacific</a>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for exclusive offers.</p>
+                <input type="email" placeholder="Email Address" style="padding: 0.5rem; width: 100%; border-radius: 4px; border: none; margin-bottom: 0.5rem;">
+                <button class="btn-primary" style="width: 100%;">Join</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 AQUAVISTA Luxury Charters. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
