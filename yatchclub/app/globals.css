@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-navy: #0a1128;
+  --color-navy-mid: #0d1a3a;
+  --color-navy-deep: #050a18;
+  --color-gold: #c9a66b;
+  --color-gold-light: #e0c097;
+  --color-gold-dark: #a88450;
+
+  /* Typography */
+  --font-display: var(--font-display), "Playfair Display", Georgia, serif;
+  --font-body: var(--font-body), "Outfit", system-ui, sans-serif;
+
+  /* Animations */
+  --animate-fade-in: fade-in 0.5s ease forwards;
+  --animate-slide-up: slide-up 0.6s ease forwards;
+  --animate-scroll-indicator: scroll-indicator 2s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-indicator {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(200%); opacity: 0; }
+}
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: theme(--color-navy);
+  color: #ffffff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: theme(--color-gold);
+  color: theme(--color-navy);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: theme(--color-navy-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: theme(--color-gold-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme(--color-gold);
+}
+
+/* Prose overrides for yacht content from WordPress */
+.prose-invert p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+}
+.prose-invert strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+.prose-invert ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+.prose-invert a {
+  color: theme(--color-gold);
+  text-decoration: underline;
+}
+
+/* Utility: reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
